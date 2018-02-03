@@ -7,14 +7,28 @@ function setElementsPass(id) {
     p.style.color = 'green';
 }
 
-function setElementsFail(id, cb, expected) {
+function setElementsFail(id, actual, expected) {
     const p = document.getElementById(id);
     p.setAttribute('style', 'white-space: pre;');
-    p.textContent += 'TEST FOR ' + id + '()' + ' FAILS\r\n';
-    p.textContent += 'Expected: ' + expected + '\r\n';
-    p.innerHTML += 'Got: ' + cb;
-    p.style.color = 'red';
 
+    p.textContent += 'TEST FOR ' + id + '()' + ' FAILS\r\n';
+    p.textContent += 'Expected: ';
+    p.appendChild(addCode(expected));
+
+    p.innerHTML += 'Got: ';
+    p.appendChild(addCode(actual));
+
+    p.style.color = 'red';
+}
+
+function addCode (code) {
+    const monospace = document.createElement('span');
+    monospace.textContent = '[' + code + ']\r\n';
+    monospace.style.fontFamily = 'monospace';
+    monospace.style.backgroundColor = '#eee';
+    monospace.style.padding = '2px';
+
+    return monospace;
 }
 
 function testSum() { //eslint-disable-line
@@ -29,7 +43,7 @@ function testMultiply() { //eslint-disable-line
     if (multiply(5, 9)[1] === 'The product of 5 and 9 is 45.') {
         setElementsPass('multiply');
     } else {
-        setElementsFail('multiply', multiply(5, 9), '45,The Product of 5 and 9 is 45.');
+        setElementsFail('multiply', multiply(5, 9), '45,The product of 5 and 9 is 45.');
     }
 }
 
