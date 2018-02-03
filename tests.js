@@ -32,43 +32,49 @@ function addCode (code) {
 }
 
 function testSum() { //eslint-disable-line
-    if (sum(4, 7)[1] === 'The sum of 4 and 7 is 11.') {
+    const testAns = sum(4, 7);
+    console.log(testAns)
+    if (testAns[1] === 'The sum of 4 and 7 is 11.') {
         setElementsPass('sum');
     } else {
-        setElementsFail('sum', sum(4, 7), '11, The sum of 4 and 7 is 11.');
+        setElementsFail('sum', testAns, '11, The sum of 4 and 7 is 11.');
     }
 }
 
 function testMultiply() { //eslint-disable-line
-    if (multiply(5, 9)[1] === 'The product of 5 and 9 is 45.') {
+    const testAns = multiply(5, 9);
+    if (testAns[1] === 'The product of 5 and 9 is 45.') {
         setElementsPass('multiply');
     } else {
-        setElementsFail('multiply', multiply(5, 9), '45,The product of 5 and 9 is 45.');
+        setElementsFail('multiply', testAns, '45,The product of 5 and 9 is 45.');
     }
 }
 
 function testSumAndMultiply() { //eslint-disable-line
-    if (sumAndMultiply(4, 7, 5)[2] === '4 and 7 and 5 sum to 16.' && sumAndMultiply(4, 7, 5)[3] === 'The product of 4 and 7 and 5 is 140.') {
+    const testAns = sumAndMultiply(4, 7, 5);
+    if (testAns[2] === '4 and 7 and 5 sum to 16.' && testAns[3] === 'The product of 4 and 7 and 5 is 140.') {
         setElementsPass('sumAndMultiply');
     } else {
-        setElementsFail('sumAndMultiply', sumAndMultiply(4, 7, 5), '16,140,4 and 7 and 5 sum to 16.,The product of 4 and 7 and 5 is 140.');
+        setElementsFail('sumAndMultiply', testAns, '16,140,4 and 7 and 5 sum to 16.,The product of 4 and 7 and 5 is 140.');
     }
 }
 
 const testArray = [2,3,4];
 
 function testSumArray() { //eslint-disable-line
-    if (sumArray(testArray)[1] === '2,3,4 was passed in as an array of numbers, and 9 is their sum.') {
+    const testAns = sumArray(testArray);
+    if (testAns[1] === '2,3,4 was passed in as an array of numbers, and 9 is their sum.') {
         setElementsPass('sumArray');
     } else {
-        setElementsFail('sumArray', sumArray(testArray), '9,2,3,4 was passed in as an array of numbers, and 9 is their sum.');
+        setElementsFail('sumArray', testAns, '9,2,3,4 was passed in as an array of numbers, and 9 is their sum.');
     }
 }
 
 function testMultiplyArray() { //eslint-disable-line
-    if (multiplyArray(testArray)[1] === 'The numbers 2,3,4 have a product of 24.') {
+    const testAns = multiplyArray(testArray);
+    if (testAns[1] === 'The numbers 2,3,4 have a product of 24.') {
         setElementsPass('multiplyArray');
     } else {
-        setElementsFail('multiplyArray', multiplyArray([testArray]), '24,The numbers 2,3,4 have a product of 24.');
+        setElementsFail('multiplyArray', testAns, '24,The numbers 2,3,4 have a product of 24.');
     }
 }
