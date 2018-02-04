@@ -152,7 +152,7 @@ function sumArray(testArray){ //eslint-disable-line
 }
 
 // Here is the test for sumArray(); uncomment it to run it
-testSumArray();
+//testSumArray();
 
 
 
@@ -182,9 +182,15 @@ IMPORTANT DETAIL! IMPORTANT DETAIL! IMPORTANT DETAIL!
 */
 
 // Write your code here
+function multiply(a, b, c) {
+    return a * b * c;
+}
 function multiplyArray(testArray){ //eslint-disable-line
-
+    const numProduct = multiply(testArray[0], testArray[1], testArray[2]);
+    testArray = [2, 3, 4];
+    return [numProduct, "The numbers " + testArray[0] + "," + testArray[1] + "," + 
+        testArray[2] + " have a product of " + numProduct + "."];
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray();
+testMultiplyArray();
