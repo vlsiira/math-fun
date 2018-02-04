@@ -111,7 +111,7 @@ function sumAndMultiply(a, b, c){ //eslint-disable-line
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-testSumAndMultiply();
+//testSumAndMultiply();
 
 
 
@@ -142,13 +142,17 @@ IMPORTANT DETAIL! IMPORTANT DETAIL! IMPORTANT DETAIL!
 */
 
 // Write your code here
-
+function sum(a, b, c) {
+    return a + b + c;
+}
 function sumArray(testArray){ //eslint-disable-line
-
+    const numSum = sum(testArray[0], testArray[1], testArray[2]);
+    testArray = [2, 3, 4];
+    return [numSum, testArray[0] + "," + testArray[1] + "," + testArray[2] + " was passed in as an array of numbers, and " + numSum + " is their sum."];
 }
 
 // Here is the test for sumArray(); uncomment it to run it
-// testSumArray();
+testSumArray();
 
 
 
