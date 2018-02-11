@@ -57,12 +57,13 @@ were input into the function:
 */
 
 // Write your code here
-function multiply(a,b){ //eslint-disable-line
-
+function multiply(x, y){ //eslint-disable-line
+    const numMultiply = x * y;
+    return [numMultiply, 'The product of ' + x + ' and ' + y + ' is ' + numMultiply + '.'];
 }
 
 // Here is the test for multiply(); uncomment it to run it
-//testMultiply();
+testMultiply();
 
 
 
