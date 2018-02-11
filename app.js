@@ -96,12 +96,25 @@ IMPORTANT DETAIL! IMPORTANT DETAIL! IMPORTANT DETAIL!
 */
 
 // Write your code here
-function sumAndMultiply(a,b,c){ //eslint-disable-line
 
+// TODO - call sum and multiply functions in this function
+//      - how to include z?
+//           - push z into an array? how to get it as an argument, though?
+
+function sumAndMultiply(x, y, z){ //eslint-disable-line
+    const totalXAndY = sum(x, y) [0];
+    const total = sum(totalXAndY, z) [0];
+    const productXAndY = multiply(x, y) [0];
+    const product = multiply(productXAndY, z) [0];
+    return [total, product, x + ' and ' + y + ' and ' + z + ' sum to ' + total + '.', 'The product of ' + x + ' and ' + y + ' and ' + z + ' is ' + product + '.'];
+
+    // const numArray = [totalXAndY, z];
+    // const numSumXYAndZ = sum(numArray[0], numArray[1]);
+    //return [numSumXYAndZ, 'The sum of '];
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply();
+testSumAndMultiply();
 
 
 
