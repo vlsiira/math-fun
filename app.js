@@ -107,21 +107,10 @@ function sumAndMultiply(x, y, z){ //eslint-disable-line
     const productXAndY = multiply(x, y) [0];
     const product = multiply(productXAndY, z) [0];
     return [total, product, x + ' and ' + y + ' and ' + z + ' sum to ' + total + '.', 'The product of ' + x + ' and ' + y + ' and ' + z + ' is ' + product + '.'];
-
-    // const numArray = [totalXAndY, z];
-    // const numSumXYAndZ = sum(numArray[0], numArray[1]);
-    //return [numSumXYAndZ, 'The sum of '];
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
 testSumAndMultiply();
-
-
-
-
-
-
-
 
 
 /////////////////////////////////////
@@ -146,17 +135,15 @@ IMPORTANT DETAIL! IMPORTANT DETAIL! IMPORTANT DETAIL!
 
 // Write your code here
 
-function sumArray(testArray){ //eslint-disable-line
 
+function sumArray(testArray){ //eslint-disable-line
+    const total = sumAndMultiply(testArray[0], testArray[1], testArray[2])[0];
+    return [total, testArray[0] + ',' + testArray[1] + ',' + testArray[2] + ' was passed in as an array of numbers, and ' + total + ' is their sum.'];
 }
+console.log('something');
 
 // Here is the test for sumArray(); uncomment it to run it
-// testSumArray();
-
-
-
-
-
+testSumArray();
 
 
 
