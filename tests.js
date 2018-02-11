@@ -33,7 +33,6 @@ function addCode (code) {
 
 function testSum() { //eslint-disable-line
     const testAns = sum(4, 7);
-    console.log(testAns)
     if (testAns[1] === 'The sum of 4 and 7 is 11.') {
         setElementsPass('sum');
     } else {
