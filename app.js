@@ -97,9 +97,6 @@ IMPORTANT DETAIL! IMPORTANT DETAIL! IMPORTANT DETAIL!
 
 // Write your code here
 
-// TODO - call sum and multiply functions in this function
-//      - how to include z?
-//           - push z into an array? how to get it as an argument, though?
 
 function sumAndMultiply(x, y, z){ //eslint-disable-line
     const totalXAndY = sum(x, y) [0];
@@ -140,7 +137,6 @@ function sumArray(testArray){ //eslint-disable-line
     const total = sumAndMultiply(testArray[0], testArray[1], testArray[2])[0];
     return [total, testArray[0] + ',' + testArray[1] + ',' + testArray[2] + ' was passed in as an array of numbers, and ' + total + ' is their sum.'];
 }
-console.log('something');
 
 // Here is the test for sumArray(); uncomment it to run it
 testSumArray();
@@ -169,8 +165,9 @@ IMPORTANT DETAIL! IMPORTANT DETAIL! IMPORTANT DETAIL!
 
 // Write your code here
 function multiplyArray(testArray){ //eslint-disable-line
-
+    const product = sumAndMultiply(testArray[0], testArray[1], testArray[2]) [1];
+    return [product, 'The numbers ' + testArray[0] + ',' + testArray[1] + ',' + testArray[2] + ' have a product of ' + product + '.'];
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray();
+testMultiplyArray();
